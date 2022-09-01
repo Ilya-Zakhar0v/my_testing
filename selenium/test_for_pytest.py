@@ -24,7 +24,7 @@ def test_main_search():
         find_select2 = browser.find_element(By.XPATH, "//li[text()='California']")
         find_select2.click()
         assert find_select2, 'Отсутствует select2, пункт 3'
-        time.sleep(2)
+        time.sleep(1)
 
         """ Screenshot 1 """
         browser.get_screenshot_as_file('screen_element_1.png')
@@ -39,7 +39,7 @@ def test_main_search():
         select2_1 = browser.find_element(By.XPATH, "//li[text()='Hawaii']")
         select2_1.click()
         assert select2_1, 'Отсутствует select2, пункт 2'
-        time.sleep(2)
+        time.sleep(1)
 
         """ Screenshot 2 """
         browser.get_screenshot_as_file('screen_element_2.png')
