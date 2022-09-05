@@ -44,6 +44,13 @@ def test_main_search():
         """ Screenshot 2 """
         browser.get_screenshot_as_file('screen_element_2.png')
         time.sleep(1)
+        
+        """ Ищем ссылку + click """
+        text_in_site = 'internal representation of the selected option'
+        elem = browser.find_element(By.LINK_TEXT, 'internal representation of the selected option').text
+        assert text_in_site in elem, 'Ссылка отсутствует'
+        browser.find_element(By.LINK_TEXT, 'internal representation of the selected option').click()
+        time.sleep(2)
     finally:
         browser.quit()
 
